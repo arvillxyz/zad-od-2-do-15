@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <meta utf="8">
+    </head>
+<body>
+
+    <center><u>Temat: Budowa selektora</u></center>
+
+<h1> 1. Dwie części selektora z opisem </h1>
+
+<p> <b>Selektory są elementami arkusza CSS. </b>Każda reguła odnosi się do <u>konkretnego elementu</u>
+    (znacznika) i składa się z dwóch części: 
+    <ul>
+        <li>
+            Selektora 
+        </li>
+        <li>
+            Deklaracji
+        </li>
+    </ul>
+    <b>Selektor</b> określa do jakich elementów ma zostać przypisane formatowanie. np. p h1
+    <b>Deklaracja</b> jest umieszczona w nawiasie klamrowym {..} i podaje to formatowanie.
+    Każda deklaracja składa się z:
+    <ul>
+        <li>
+            przynajmniej z jednego zespołu <b>cecha</b> lub inaczej własność albo właściwość (ang.
+            property)
+        </li>
+        <li>
+            <b>wartość</b> (ang. value), przy czym można podać dowolną liczbę, rozdzielając kolejne
+            znakiem średnika (;)
+        </li>
+    </ul>
+</p>
+
+<h1> 2. Znaczenie nawiasów klamrowych </h1>
+
+<p> W <b>nawiasie klamrowym</b> jest umieszona deklaracja, która <u>podaje formatowanie</u>. <br> <br>
+    Przykład 1: <br>
+<textarea rows="2" cols="45">
+p { color: red; }
+</textarea>
+<br><br>
+Przykład 2: <br>
+<textarea rows="2" cols="45">
+p b { color: red; background-color: yellow }
+</textarea>
+</p>
+
+<h1> 3. Cechy </h1>
+
+<p> Każda grupa elementów (znaczników np. <b>body, p, b</b>) <u>ma określony zespół cech CSS,
+    które można jej przypisać.</u>
+    Każda <b>cecha</b> ma <u>ściśle wyszczególnioną listę wartości</u>, które może przyjąć.
+    Na przykład: cecha <b>text-align</b> (wyrównanie tekstu) może być przypisana <u>tylko i wyłącznie do
+    elementów blokowych</u>, ponieważ podanie jej dla elementów wyświetlanych w linii nie
+    miałoby sensu. Z drugiej strony cecha ta może przyjmować tylko wartości takie jak: <b>left,
+    right, center, justify</b>. Przypisanie do niej np. wartości koloru <u>nie miałoby sensu</u>. </p>
+
+<h1> 4. Wartości </h1>
+
+<p> <b>Wartość</b> (ang. value), to <u>dane w deklaracji przy której można podać dowolną liczbę</u>, rozdzielając kolejne
+    znakiem średnika (;) <u><br>(Średnik na końcu deklaracji nie jest konieczny.)</u><br><br>
+    Wykorzystanie <b>wartości</b> na przykładzie:<br>
+<textarea rows="2" cols="45">
+p { color: red; }
+</textarea>
+    <br><br>
+    gdzie:
+    <ul>
+        <li>
+            <u>Selektorem</u> jest znacznik p,
+        </li>
+        <li>
+            <u>Deklaracja</u> ma postać { color: red }.
+        </li>
+        <li>
+            <u>Cechą</u> jest color,
+        </li>
+        <li>
+            <u><b>Wartością</b></u> red.
+        </li>
+    </ul>
+</p>
+
+<h1> 5. Kiedy stosujemy znak średnika (;), kiedy nie jest konieczny? </h1>
+
+<p> <b>Znak średnika</b> (;) stosujemy wtedy, kiedy <u>chcemy rozdzielić wartości wypisywane obok siebie,</u> np.<br><br>
+<textarea rows="2" cols="45">
+p b { color: red; background-color: yellow }
+</textarea>
+    <br><br>
+    Mamy tutaj <u>rozdzielone</u> wartości <b>color</b> (odpowiadający za kolor) i <b>background-color</b> (odpowiadający za kolor tła)
+</p>
+
+<h1> Ciekawostka: </h1>
+
+<p> <b>Czy wiesz że...</b> <br>
+    W MSIE 8.0 i starszych jeden plik arkusza CSS <u>może zawierać tylko</u> <b>4095 selektorów,</b> przy
+    czym w listach każdy selektor liczy się osobno - następne deklaracje zostaną <b>pominięte!</b>
+    W przypadku przekroczenia tej granicy, jedynym rozwiązaniem jest <u>podział arkusza CSS na
+    kilka osobnych plików</u>, ale nie więcej niż <b>31.</b> </p>
+</body>
+</html>
